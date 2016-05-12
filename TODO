@@ -1,0 +1,14 @@
+- Simple interface
+  - Search Tracks. Done
+  - Search Results / Playlist view. Done
+  - Playlists List. Done
+
+- Define a playlist
+- Define a track
+- Search Track names using Spotify Web Api
+
+Nice to have:
+
+- Local Storage.
+- Think of a cool name.
+- Filter/Search Playlists.
