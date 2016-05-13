@@ -45,8 +45,22 @@
 
 header {
   padding-left: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
 #search-tracks {
   padding-top:  10px;
+}
+
+.main-content {
+  padding-top: 39px;
+}
+
+.navbar {
+  min-height: 11px;
+  z-index: 11;
 }
