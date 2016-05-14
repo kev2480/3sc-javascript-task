@@ -9,11 +9,19 @@ gulp.task('browserify', function() {
     .pipe(browserify({transform: 'hbsfy'}))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/js'));
+  gulp.src('src/js/sidemenu.js')
+    .pipe(browserify({transform: 'hbsfy'}))
+    .pipe(concat('sidemenu.js'))
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('copy', function() {
   gulp.src('src/index.html')
     .pipe(gulp.dest('dist'));
+    //CSS copy
+  gulp.src(['src/css/**/*'])
+    .pipe(gulp.dest('dist/css'));
+
 });
 
 gulp.task('watch', ['build'], function() {

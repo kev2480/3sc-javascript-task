@@ -19,8 +19,8 @@
     <header class="light bk-dark">
       <h4>Playlist Panda</h4>
     </header>
-    
-  <!--  <div id="main" class="container"></div> -->
+
+      <div id="main" class="container"></div>
       <!-- uncomment code for absolute positioning tweek see top comment in css -->
       <!-- <div class="absolute-wrapper"> </div> -->
       <!-- Menu -->
@@ -65,7 +65,7 @@
       </div>
       <!-- Main Menu -->
       <div class="side-menu-container">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" id="playlists">
 
               <li><a href="#"><span class="glyphicon glyphicon-send"></span> Dope freshness </a></li>
               <li class="active"><a href="#"><span class="glyphicon glyphicon-plane"></span> Party playlist </a></li>
@@ -82,54 +82,24 @@
       <div class="container-fluid main-content">
           <div class="side-body">
             <div class="row bk-light dark title">
-              <form id="search-tracks" role="search">
+              <form id="searchTracks">
                 <div class="input-group">
-                   <input type="text" class="form-control" placeholder="Search tracks">
+                   <input type="text" class="form-control" placeholder="Search tracks" id="inputBar">
                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
                    </span>
                 </div>
               </form>
             </div>
-            <!-- Playlist/Search Results here -->
+
+            <div id="listResults" class="row bk-light dark title"><h4>Loading</h4></div>
+            <!-- Playlist/Search Results here
              <div class="row bk-light dark title">
                <h1> Playlist/Search Results </h1>
              </div>
              <div class="row">
-                 <div class="list-group">
-                   <!-- New List item here -->
-                   <a href="#" class="list-group-item clearfix">
-                     <span class="glyphicon glyphicon-music"></span>
-                     Loading.....
-                     <span class="pull-right">
-                       <button class="btn btn-xs btn-primary">
-                         <span class="glyphicon glyphicon-plus"></span>
-                       </button>
-                       <button class="btn btn-xs btn-info">
-                         <span class="glyphicon glyphicon-link"></span>
-                       </button>
-                       <button class="btn btn-xs btn-warning">
-                         <span class="glyphicon glyphicon-trash"></span>
-                       </button>
-                     </span>
-                   </a>
-                   <!-- New List item here -->
-                   <a href="#" class="list-group-item clearfix">
-                     <span class="glyphicon glyphicon-music"></span>
-                     Loading.....
-                     <span class="pull-right">
-                       <button class="btn btn-xs btn-primary">
-                         <span class="glyphicon glyphicon-plus"></span>
-                       </button>
-                       <button class="btn btn-xs btn-info">
-                         <span class="glyphicon glyphicon-link"></span>
-                       </button>
-                       <button class="btn btn-xs btn-warning">
-                         <span class="glyphicon glyphicon-trash"></span>
-                       </button>
-                     </span>
-                   </a>
-                   <!-- New List item here -->
+                 <div id="listResults" class="list-group">
+                   <!-- New List item here
                    <a href="#" class="list-group-item clearfix">
                      <span class="glyphicon glyphicon-music"></span>
                      Loading.....
@@ -146,7 +116,7 @@
                      </span>
                    </a>
                  </div>
-            </div>
+            </div>-->
           </div>
       </div>
   </div>
