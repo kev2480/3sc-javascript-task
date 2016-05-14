@@ -10,7 +10,7 @@ var HomeView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(template(
-      {name: 'World'}
+      {name: 'Interactive template here!'}
     ));
   }
 });
