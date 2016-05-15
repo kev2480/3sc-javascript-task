@@ -1,6 +1,7 @@
 var Backbone = require('backbone');
 var HomeView = require('./views/home.view');
 var ResultView = require('./views/result.view');
+var PlaylistView = require('./views/playlist.view');
 var TracksList = require('./collections/TracksList');
 
 (function () {
@@ -27,6 +28,8 @@ $('#searchTracks').submit(function(event){
     var view = new ResultView();
     view.render();
 });
+
+var playlistView = new PlaylistView();
 
 /*var Tracks = Backbone.Collection.extend({
 
