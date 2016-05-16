@@ -7,7 +7,7 @@ Backbone.$ = $;
   var TracksList = Backbone.Collection.extend({
 
       initialize: function(){
-        console.log("Tracks initialized");
+        console.log("Searched Tracks initialized");
       },
 
       parse: function(response){

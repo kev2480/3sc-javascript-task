@@ -8,6 +8,4 @@ var Tracks = Backbone.Collection.extend({
     model:Track
 });
 
-
-
 module.exports = Tracks;

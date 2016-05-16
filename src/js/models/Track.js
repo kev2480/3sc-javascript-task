@@ -14,7 +14,7 @@ var Track = Backbone.Model.extend({
     idAttribute: "ID",
 
     initialize: function(){
-        console.log("Music is the answer");
+        console.log("Track created!");
     }
 });
 
