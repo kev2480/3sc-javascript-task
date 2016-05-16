@@ -6,23 +6,25 @@
   <div class="list-group">
     {{#each tracks.items}}
     <!-- New List item here -->
-    <a href="{{external_urls.spotify}}" target="_blank" class="list-group-item clearfix">
+    <li class="list-group-item clearfix">
       <span class="col-md-4"><span class="glyphicon glyphicon-music"></span> {{name}}</span>
       <span class = "col-md-3">{{album.name}}</span>
       <span class = "col-md-3">{{artists.0.name}}</span>
       <span class="pull-right">
-        <button id="add{{@index}}" class="btn btn-xs btn-primary">
-          <span class="glyphicon glyphicon-plus"></span>
-        </button>
-        <button id="delete{{@index}}" class="btn btn-xs btn-warning">
-          <span class="glyphicon glyphicon-trash"></span>
-        </button>
-        <button class="btn btn-xs btn-primary" onclick="audio{{@index}}.play()">
+        <a href="#addTrackDialog" data-toggle="modal" onclick="openAddDialog({{@index}})" class="btn btn-xs btn-primary add-track-dialog">
+          <span class="glyphicon glyphicon-plus"></span> Add to playlist
+        </a>
+        <a href="{{external_urls.spotify}}" target="_blank" class="btn btn-xs btn-warning" role="button">
+          <span class="glyphicon glyphicon-link"></span> Spotify
+        </a>
+        <button class="btn btn-xs btn-primary" onclick="audio{{@index}}.play()" aria-label="preview">
           <audio id="audio{{@index}}" src="{{preview_url}}"></audio>
           <span class="glyphicon glyphicon-volume-up"></span>
         </button>
       </span>
-    </a>
+    </li>
+    {{else}}
+      <h4>Sorry! Couldn't find anything :-(</h4>
     {{/each}}
   </div>
 </div>

@@ -64,3 +64,19 @@ header {
   min-height: 11px;
   z-index: 11;
 }
+
+.noPlaylists {
+  padding-left: 5px;
+}
+
+.playlist-panel {
+  margin-top: 5px;
+}
+
+.playlist-panel h1 {
+  margin-top: 5px;
+}
+
+.playlist {
+  width:299px;
+}

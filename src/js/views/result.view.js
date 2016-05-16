@@ -25,6 +25,7 @@ var ResultView = Backbone.View.extend( {
             //{title: 'Interactively loaded title here!'}
             response
           ));
+          window.searchedTracks = response;
       }
     });
   }

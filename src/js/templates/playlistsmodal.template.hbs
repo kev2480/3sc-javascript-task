@@ -1,0 +1,8 @@
+
+{{#each playlists}}
+  <button type="button" class="list-group-item" data-id="{{ID}}">
+    <span class="glyphicon glyphicon-cd"></span> {{title}}
+  </button>
+{{else}}
+  <p class="noPlaylists">No playlists, get started by adding one.</p>
+{{/each}}
