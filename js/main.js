@@ -13801,59 +13801,15 @@ var Backbone = require('backbone');
 var Playlist = require('../models/Playlist');
 
 /*
- * Playlist definition: Tracks > Playlist > Playlists
-
-var Track = Backbone.Model.extend({
-  defaults: {
-    artist: '',
-    title: '',
-    preview_url: '',
-    spotify_link: ''
-  },
-
-  initialize: function(){
-    console.log("Track initialized");
-  },
-});
-
-module.exports = Track;
-
-var Tracks = Backbone.Collection.extend({
-  model: Track,
-  initialize: function(){
-    console.log("Tracks initialized");
-  },
-});
-
-var Playlist = Backbone.Model.extend({
-  defaults: {
-    name: '',
-    creation_time: '',
-    genre: ''
-  },
-  tracks: new Tracks(),
-
-  initialize: function(){
-    console.log("Playlist initialized");
-  },
-
-});
-
-var Playlists = Backbone.Collection.extend({
-  model: Playlist,
-  initialize: function(){
-    console.log("Playlists initialized");
-  },
-});*/
-
+ * Playlist definition: Track > Tracks > Playlist > Playlists
+ */
 
 var Playlists = Backbone.Collection.extend({
     model: Playlist,
-    
+
 });
 
 module.exports = Playlists;
-//module.exports = Playlists;
 
 },{"../models/Playlist":16,"backbone":1,"jquery":10}],13:[function(require,module,exports){
 var $ = require('jquery');
@@ -13865,8 +13821,6 @@ Backbone.$ = $;
 var Tracks = Backbone.Collection.extend({
     model:Track
 });
-
-
 
 module.exports = Tracks;
 
@@ -13880,7 +13834,7 @@ Backbone.$ = $;
   var TracksList = Backbone.Collection.extend({
 
       initialize: function(){
-        console.log("Tracks initialized");
+        console.log("Searched Tracks initialized");
       },
 
       parse: function(response){
@@ -13996,7 +13950,7 @@ var Playlist = Backbone.Model.extend({
   tracks: new Tracks (),
 
   initialize: function(){
-      console.log("Playists are the answer");
+      console.log("Playlist created!");
       this.set({"creation_date": getDate()});
   }
 });
@@ -14027,7 +13981,7 @@ var Track = Backbone.Model.extend({
     idAttribute: "ID",
 
     initialize: function(){
-        console.log("Music is the answer");
+        console.log("Track created!");
     }
 });
 
@@ -14059,30 +14013,6 @@ var TracksList = require('./collections/TracksList');
 
   module.exports = Router;
 })();
-
-/*$('#searchTracks').submit(function(event){
-    event.preventDefault();
-    var view = new ResultView();
-    view.render();
-});
-
-var playlistView = new PlaylistView();*/
-
-/*var Tracks = Backbone.Collection.extend({
-
-    initialize: function(){
-      console.log("Tracks initialized");
-    },
-
-    parse: function(response){
-        console.log(response);
-        return response.tracks;
-    }
-});
-
-var tracksList = new Tracks();
-tracksList.url = 'https://api.spotify.com/v1/search?&type=track&q=never%20gonna%20give%20you%20up';
-tracksList.fetch();*/
 
 },{"./collections/TracksList":14,"./views/home.view":24,"./views/playlist.view":25,"./views/result.view":27,"backbone":1}],19:[function(require,module,exports){
 // hbsfy compiled Handlebars template
@@ -14328,32 +14258,6 @@ var PlaylistView = Backbone.View.extend( {
   },
 
   render: function() {
-    /*Populate some test data.
-    var track1 = new Track({ID: 0, artist: "b", title: "baaaT", preview_url: "bpu", spotify_link: "bsl"});
-    var track2 = new Track({ID: 1, artist: "b", title: "bT", preview_url: "bpu", spotify_link: "bsl"});
-
-    //Put tracks into a tracks collection.
-    var tracks = new Tracks([track1, track2]);
-
-    //Put into a playlist.
-    var playlist = new Playlist();
-    playlist.set({"tracks": tracks});
-    playlist.set({"title" : "playlist name!"});
-
-    var playlist2 = new Playlist();
-    playlist2.set({"tracks": tracks});
-    playlist2.set({"title" : "Road trip playlist!"});
-
-    console.log(playlist.get("tracks").toJSON());
-
-    //Put playlists into a collection of playlists.
-    //var playlists = new Playlists([playlist, playlist2]);
-
-    playlists.add(playlist);
-    playlists.add(playlist2);
-
-    console.log(playlists.toJSON());*/
-
     this.$el.html(template(
       //Render using json format.
       {playlists: playlists.toJSON()}
