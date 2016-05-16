@@ -39,3 +39,7 @@ What's next?
 - Importing user spotify playlists.
 
 - Exporting playlists into a readable format, maybe an excel spreadsheet?
+
+- Figure out why chrome plays the html5 audio preview but firefox doesn't.
+
+- Ensure that it looks good on a mobile device too.
