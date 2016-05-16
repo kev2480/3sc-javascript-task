@@ -1,0 +1,49 @@
+
+<div class="row bk-light dark title panel panel-default playlist-panel">
+  <div class="panel-body">
+    <div class="group">
+      <input type="text" id="titleInput" required value="{{title}}" oninput="updateName({{ID}})">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Playlist name</label>
+    </div>
+    <div class="group">
+      <input type="text" id="genreInput" required value="{{genre}}" oninput="updateGenre({{ID}})">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Genre</label>
+    </div>
+    <p>Created on the {{creation_date}} </p>
+    <button onclick="deletePlaylist({{ID}})" class="btn btn-warning">
+      <span class="glyphicon glyphicon-trash"></span>  Delete
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="list-group">
+    {{#each tracks.models}}
+    <!-- New List item here -->
+    <li class="list-group-item clearfix">
+      <span class="col-md-4"><span class="glyphicon glyphicon-music"></span> {{attributes.title}}</span>
+      <span class = "col-md-3">{{attributes.artist}}</span>
+      <span class="pull-right">
+        <a href="{{attributes.spotify_link}}" target="_blank" class="btn btn-xs btn-warning" role="button">
+          <span class="glyphicon glyphicon-link"></span> Spotify
+        </a>
+        <button onclick="deleteTrack('{{attributes.ID}}')" class="btn btn-xs btn-warning">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+        <button class="btn btn-xs btn-primary" onclick="audio{{@index}}.play()">
+          <audio id="audio{{@index}}" src="{{attributes.preview_url}}"></audio>
+          <span class="glyphicon glyphicon-volume-up"></span>
+        </button>
+      </span>
+    </li>
+    {{else}}
+    <!-- Empty playlist! -->
+    <h4> Looks like this playlist is empty! </h4>
+    <h5> Why not add some tracks, begin by searching above </h5>
+    {{/each}}
+  </div>
+</div>

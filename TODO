@@ -3,14 +3,15 @@
   - Search Results / Playlist view. Done
   - Playlists List. Done
 
-- Define a playlist
-- Define a track
-- Search Track names using Spotify Web Api
-- Add/delete tracks
-- Links to spotify url and preview url
+- Define a playlist Done.
+- Define a track Done.
+- Search Track names using Spotify Web Api Done.
+- Add/delete tracks Done.
+- Links to spotify url and preview url Done.
 
 Nice to have:
 
 - Local Storage.
 - Think of a cool name. Done
 - Filter/Search Playlists.
+- Album Artwork.

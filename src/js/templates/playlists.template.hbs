@@ -1,0 +1,8 @@
+
+{{#each playlists}}
+  <li class="active">
+    <a href="#" class="playlist" onclick="loadPlaylist({{ID}})"><span class="glyphicon glyphicon-cd"></span> {{title}} </a>
+  </li>
+{{else}}
+  <li class="noPlaylists">No playlists, get started by adding one above.</li>
+{{/each}}

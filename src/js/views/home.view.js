@@ -5,12 +5,12 @@ var template = require('../templates/home.template.hbs');
 Backbone.$ = $;
 
 var HomeView = Backbone.View.extend({
-  el: '#main',
+  el: '#listResults',
   template: template,
 
   render: function() {
     this.$el.html(template(
-      {name: 'Interactive template here!'}
+
     ));
   }
 });

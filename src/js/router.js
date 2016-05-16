@@ -1,6 +1,7 @@
 var Backbone = require('backbone');
 var HomeView = require('./views/home.view');
 var ResultView = require('./views/result.view');
+var PlaylistView = require('./views/playlist.view');
 var TracksList = require('./collections/TracksList');
 
 (function () {
@@ -22,11 +23,13 @@ var TracksList = require('./collections/TracksList');
   module.exports = Router;
 })();
 
-$('#searchTracks').submit(function(event){
+/*$('#searchTracks').submit(function(event){
     event.preventDefault();
     var view = new ResultView();
     view.render();
 });
+
+var playlistView = new PlaylistView();*/
 
 /*var Tracks = Backbone.Collection.extend({
 
