@@ -5,7 +5,7 @@
  - Clone your repository
  - Install node/npm.
  - Run `npm install` from the project directory
- - Run `npm install gulp` from the project directory
+ - Run `npm install -g gulp`
  - Run `gulp watch` to listen for changes and build.
  - Go to `dist/index.html` and open.
  - Push your commits to the forked repository
