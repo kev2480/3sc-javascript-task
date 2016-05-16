@@ -1,43 +1,36 @@
-#3SC JavaScript/Backbone Task
+#3SC JavaScript/Backbone Task - Playlist Panda.
 
 ### Getting Started
  - Fork this task repository
  - Clone your repository
- - Install node/npm
+ - Install node/npm.
  - Run `npm install` from the project directory
+ - Run `npm install gulp` from the project directory
+ - Run `gulp watch` to listen for changes and build.
+ - Go to `dist/index.html` and open.
  - Push your commits to the forked repository
 
-### Task
+### What is it?!
 
-You will be building a simple playlist manager using the [Backbone MVC framework](http://backbonejs.org).
+Playlist Panda is a playlisting utility that connects to spotify and makes use of the [Backbone MVC framework](http://backbonejs.org).
 
-A boilerplate project has already been created.
+So far the current features are:
 
-- The application should provide a simple HTML interface displaying a table of playlists created by the user.
-- The user should be able to create new playlists.
-- The user may add and remove tracks from each playlist.
+- Add / Edit and Delete playlists.
+- Search tracks from spotify.
+- Add searched tracks to a created playlist.
+- Listen to a tracks preview music.
+- Open the track directly in spotify.
 
-Each playlist should store the following properties:
-
- - Name
- - Creation Date/Time
- - Genre
- - Tracks []
-
-Each track should store the following:
- - Artist
- - Title
- - Preview URL
-
-When populating a playlist, the application should allow the user to search track names using the [Spotify Web API](https://developer.spotify.com/web-api/). When selected, the track properties should be populated from the response data, before being saved to the playlist.
-
-Example search: https://api.spotify.com/v1/search?&type=track&q=never%20gonna%20give%20you%20up
-
-The application should run in a web browser. Data persistence is optional (e.g. localStorage), however **a backend API is not required**.
-
-**NOTE:**
- - You may use any additional third-party JavaScript or CSS components or dependencies. 
- - You may use any resources at your disposal for guidance, please add any URLs to the NOTES.md file.
-
-### Feedback
-In the **NOTES.md** file, please provide feedback on your experience with the task. For example, any problems you encountered or solved. How might you refactor or extend your project to persist data to a backend API?
+Future ideas:
+- Localstorage. Making use of Backbone.Localstorage would be a key feature that
+  this project would benefit from. I would need to investigate how to save the
+  Playlists Collection and the Tracks Collection together.
+  [Backbone.localStorage](https://github.com/jeromegn/Backbone.localStorage)
+- Another option would be implementing this to a RESTful backend API that performs
+  CRUD operations to and from a small SQL database. As the structure is quite simple
+  we could also potentially use a NoSql setup.
+- Album artwork, delivering album artwork from spotify would be a nice way to give
+  the application a more interesting experience.
+- Importing user spotify playlists.
+- Exporting playlists into a readable format, maybe an excel spreadsheet?

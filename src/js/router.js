@@ -22,27 +22,3 @@ var TracksList = require('./collections/TracksList');
 
   module.exports = Router;
 })();
-
-/*$('#searchTracks').submit(function(event){
-    event.preventDefault();
-    var view = new ResultView();
-    view.render();
-});
-
-var playlistView = new PlaylistView();*/
-
-/*var Tracks = Backbone.Collection.extend({
-
-    initialize: function(){
-      console.log("Tracks initialized");
-    },
-
-    parse: function(response){
-        console.log(response);
-        return response.tracks;
-    }
-});
-
-var tracksList = new Tracks();
-tracksList.url = 'https://api.spotify.com/v1/search?&type=track&q=never%20gonna%20give%20you%20up';
-tracksList.fetch();*/
