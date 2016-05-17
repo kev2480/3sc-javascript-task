@@ -43,3 +43,6 @@ What's next?
 - Figure out why chrome plays the html5 audio preview but firefox doesn't.
 
 - Ensure that it looks good on a mobile device too.
+
+- Test driven development - If going further with this project it would be key to
+  ensure the tool is tested properly, this could be useful: [Karma](http://karma-runner.github.io/0.13/index.html)

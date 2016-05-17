@@ -34,3 +34,5 @@ Future ideas:
   the application a more interesting experience.
 - Importing user spotify playlists.
 - Exporting playlists into a readable format, maybe an excel spreadsheet?
+- Test driven development - If going further with this project it would be key to
+  ensure the tool is tested properly, this could be useful: [Karma](http://karma-runner.github.io/0.13/index.html)
