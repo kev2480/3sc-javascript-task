@@ -13873,6 +13873,10 @@ $('#searchTracks').submit(function(event){
 $('#addPlaylist').submit(function(event){
     event.preventDefault();
     playlistView.add($('#addPlaylistInput').val());
+    //Close
+    $('.navbar-nav').toggleClass('slide-in');
+    $('.side-body').toggleClass('body-slide-in');
+    $('#search').removeClass('in').addClass('collapse').slideUp(200);
 });
 
 //Delete a track from a playlist.
