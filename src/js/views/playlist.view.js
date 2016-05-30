@@ -1,9 +1,13 @@
+/*
+ * View for the list of Playlists.
+ */
 var $ = require('jquery');
 var Backbone = require('backbone');
 var template = require('../templates/playlists.template.hbs');
 var templateModal = require('../templates/playlistsmodal.template.hbs');
 var Playlists = require('../collections/Playlists');
 var Playlist = require('../models/Playlist');
+var PlaylistTracksView = require('./playlistTracks.view');
 var Tracks = require('../collections/Tracks');
 var Track = require('../models/Track');
 
@@ -16,6 +20,18 @@ var playlists = new Playlists([]);
 var PlaylistView = Backbone.View.extend( {
   el: '#playlists',
   template: template,
+
+  // events
+  // ===========================================================================
+  events: {
+      "click .playlist-link": "openPlaylist"
+  },
+
+  openPlaylist: function(e) {
+    playlistID = $(e.currentTarget).data("id");
+    new PlaylistTracksView(window.playlists.get(playlistID));
+    //currentPlaylist = id;
+  },
 
 
   initialize: function(){
@@ -57,6 +73,7 @@ var PlaylistView = Backbone.View.extend( {
 
     return id + 1;
   }
+
 });
 
 module.exports = PlaylistView;

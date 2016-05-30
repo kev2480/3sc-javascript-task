@@ -14,6 +14,20 @@ var PlaylistTracksView = Backbone.View.extend( {
     this.render();
   },
 
+  // events
+  // ===========================================================================
+  events: {
+      "click .delete-button": "deleteTrack"
+  },
+
+  deleteTrack: function(e) {
+    trackID = $(e.currentTarget).data("id");
+    var tracks = this.playlist.get("tracks");
+    var track = tracks.get(trackID);
+    tracks.remove(track);
+    this.render();
+  },
+
   render: function() {
           this.$el.html(template(
             this.playlist.toJSON()

@@ -32,7 +32,7 @@ $('#addPlaylist').submit(function(event){
     $('#search').removeClass('in').addClass('collapse').slideUp(200);
 });
 
-//Delete a track from a playlist.
+//Delete a track from a playlist. //REMOVED NOW
 window.deleteTrack = function (id){
   var playlist = window.playlists.get(currentPlaylist);
   var tracks = playlist.get("tracks");
@@ -41,7 +41,7 @@ window.deleteTrack = function (id){
   loadPlaylist(currentPlaylist);
 }
 
-//Load playlist on click
+//Load playlist on click //REMOVED NOW
 window.loadPlaylist = function (id){
   new PlaylistTracksView(window.playlists.get(id));
   currentPlaylist = id;
